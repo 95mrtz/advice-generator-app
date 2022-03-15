@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1,maximum-scale=1,minimum-scale=1, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -15,35 +20,29 @@
     <title>Frontend Mentor | Advice generator app</title>
 
     <!-- CSS -->
-
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
   <body>
-    <main>
+    <div class="container">
       <div class="title">
-        <h4>
-          Advice #<span><!-- Advice ID goes here --></span>
-        </h4>
+        <p>Advice #<span id="adviceId"></span></p>
       </div>
       <div class="quote">
-        <p>
-          "<!-- Advice text goes here -->
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veritatis
-          quod praesentium reprehenderit quas animi eos.  "
-        </p>
+        <p id="contentQuote"></p>
       </div>
-      <div class="pattern-divider">
-      </div>
-      <button class="btn-random"><div class="icon-dice"></div></button>
-      </div>
-    </main>
+      <div class="pattern-divider"></div>
+      <button class="btn-random" id="btnRandom">
+        <div class="icon-dice"></div>
+      </button>
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/manuelrtz" target="_blank">Manuel Ortiz</a>.
-
+      >. Coded by
+      <a href="https://github.com/manuelrtz" target="_blank">Manuel Ortiz</a>.
     </div>
 
     <!-- JS -->

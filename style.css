@@ -5,7 +5,7 @@
   --light-cyan: hsl(193, 38%, 86%);
   --neon-green: hsl(150, 100%, 66%);
   /* Neutral */
-  --grayish-blue: hsl(217, 19%, 38%); 
+  --grayish-blue: hsl(217, 19%, 38%);
   --dark-grayish-blue: hsl(217, 19%, 24%);
   --dark-blue: hsl(218, 23%, 16%);
 }
@@ -29,8 +29,8 @@ body {
   align-items: center;
 }
 
-main {
-    background-color: var(--dark-grayish-blue);
+.container {
+  background-color: var(--dark-grayish-blue);
   border-radius: 13px;
   width: 100%;
   max-width: 700px;
@@ -39,58 +39,72 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 1px 1px 89px 28px rgba(0,0,0,0.29);
--webkit-box-shadow: 1px 1px 89px 28px rgba(0,0,0,0.29);
--moz-box-shadow: 1px 1px 89px 28px rgba(0,0,0,0.29);
+  box-shadow: 1px 1px 89px 28px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 1px 1px 89px 28px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 1px 1px 89px 28px rgba(0, 0, 0, 0.29);
 }
 
-.title h4, .title h4 span {
-    font-size: 23px;
-    text-transform: uppercase;
-    color: var(--neon-green);
-    letter-spacing: 5px;
+.title p,
+.title p span {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--neon-green);
+  letter-spacing: 5px;
 }
 
 .quote {
-    margin: 5px 0px;
-    transform: translateY(20%);
+  margin: 9px 0px;
+  transform: translateY(20%);
 }
 .quote p {
-    color: var(--light-cyan);
-    text-align: center;
+  color: var(--light-cyan);
+  text-align: center;
 }
 
 .pattern-divider {
-    background-image: url("./images/pattern-divider-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 30px;
-    margin-top: 5px;
-    transform: translateY(50px);
+  background-image: url("./images/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  transform: translateY(50px);
 }
 
 .btn-random {
-    border: none;
-    border-radius: 50%;
-    padding: 21px;
-    background-color: var(--neon-green);
-    transform: translateY(90px);
-    cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 21px;
+  background-color: var(--neon-green);
+  transform: translateY(90px);
+  cursor: pointer;
 }
 
 .btn-random:hover {
-    box-shadow: 0px 0px 25px 20px rgba(82,255,168,0.3);
--webkit-box-shadow: 0px 0px 25px 20px rgba(82,255,168,0.3);
--moz-box-shadow: 0px 0px 25px 20px rgba(82,255,168,0.3);
+  box-shadow: 0px 0px 25px 20px rgba(82, 255, 168, 0.3);
+  -webkit-box-shadow: 0px 0px 25px 20px rgba(82, 255, 168, 0.3);
+  -moz-box-shadow: 0px 0px 25px 20px rgba(82, 255, 168, 0.3);
 }
 
 .icon-dice {
-    background-image: url("./images/icon-dice.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
+  background-image: url("./images/icon-dice.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-dice:hover, .icon-dice:active {
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .attribution {
@@ -105,8 +119,51 @@ main {
 }
 
 .attribution a:hover {
-    font-size: 13px;
-    color: var(--neon-green);
+  font-size: 13px;
+  color: var(--neon-green);
 }
 
+@media only screen and (max-width: 980px) {
+  .container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+  }
 
+  .btn-random {
+    transform: translateY(70px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 300px;
+    padding: 30px;
+  }
+
+  .title p,
+  .title p span {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .quote {
+    margin: 3px 0px;
+    transform: translateY(20%);
+  }
+
+  .quote p {
+    font-size: 21px;
+  }
+
+  .pattern-divider {
+    background-image: url("./images/pattern-divider-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    transform: translateY(50px);
+  }
+}
