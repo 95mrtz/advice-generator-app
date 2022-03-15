@@ -28,19 +28,17 @@ Users should be able to:
 
 ## My process
 
-The first thing to clarify is that this challenge took me longer than it was, it really was a very big challenge, especially the part where I had to do modals with CSS.
+The process was faster than usual because it is a very small but very nice project.
 
-The first thing as always was the structure, I put together all the parts of the HTML, both the fixed parts and the modals, to know how many sections it had.
+The first thing was to build the structure in HTML and give it the design with CSS, declaring global variables with :root for the colors used.
 
-The next thing was to style everything in desktop view, which was relatively simple, although there were many things that I was learning, such as the <progress> tag in HTML and how it can be modified with CSS, as well as how a <hr behaves > with Flexbox, after that, hide all the sections that would be modal.
+Transform was also used to accommodate certain elements.
 
-Then things got a bit complicated to manage manners, I did it little by little, although it took me 2 and a half days to accommodate everything to my liking, I know it didn't turn out quite right.
+For the mobile version, the changes that had to be made were very small.
 
-Now comes the functional part, this with Javascript, where I know that the code can be greatly improved.
+The operation using an external API, with fetch to fetch the data.
 
-Then, for the mobile part, I know that it can also be improved a lot, but honestly I was very tired and wanted to finish it as soon as possible, the hamburger menu can be improved, as well as the manners.
-
-This could be done in a very simple way with Bootstrap and thus save me many lines of code.
+A very small project, but very entertaining.
 
 ### Built with
 
@@ -50,6 +48,8 @@ This could be done in a very simple way with Bootstrap and thus save me many lin
 - Mobile-first workflow
 - Javascript
 - HTML DOM
+- Fetch API
+- [External API](https://api.adviceslip.com/) 
 ## Author
 
 - Frontend Mentor - [@manuelrtz](https://www.frontendmentor.io/profile/manuelrtz)
